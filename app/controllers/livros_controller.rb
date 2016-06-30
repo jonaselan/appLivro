@@ -23,7 +23,7 @@ class LivrosController < ApplicationController
 
   private
   def user_params
-    params.require(:livro).permit(:nome, :exemplares)
+    params.require(:livro).permit(:nome, :exemplares, :price)
   end
 
 end
