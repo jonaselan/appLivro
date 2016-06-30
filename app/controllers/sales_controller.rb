@@ -8,7 +8,7 @@ class SalesController < ApplicationController
   end
   
   def create
-    @sale = Livro.new(user_params)
+    @sale = Sale.new(user_params)
     if @sale.save
       redirect_to @sale,
                   :notice => 'Venda cadastrada!'
@@ -19,7 +19,7 @@ class SalesController < ApplicationController
 
   private
   def user_params
-    params.require(:sale).permit(:sale_id)
+    params.require(:sale).permit(:livro_id)
   end
 
 end

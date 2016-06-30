@@ -17,13 +17,13 @@
       <tr>
         <td><%= livro.nome %></td>
         <td><%= livro.exemplares %></td>
-        <td><%= livro.price %></td>
+        <td>R$ <%= livro.price %></td>
         <td><%= link_to 'Mostrar', livro %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-Total: <%= @livros.sum(:price) %>
+Total: R$ <%= @livros.sum(:price) %>
 <br>
 <%= link_to 'Novo Livro', new_livro_path %>

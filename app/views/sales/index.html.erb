@@ -14,7 +14,7 @@
     <% @sales.each do |sale| %>
       <tr>
         <td><%= sale.livro.nome %></td>
-        <td><%= sale.livro.price %></td>
+        <td>R$ <%= sale.livro.price %></td>
       </tr>
     <% end %>
   </tbody>
