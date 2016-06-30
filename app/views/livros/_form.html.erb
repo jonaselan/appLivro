@@ -1,0 +1,24 @@
+<% if @livro.errors.any? %>
+  <div id="error_explanation">
+    <h2>Infelizmente não foi possível completar a ação pois o formulário possui os seguintes erros:</h2>
+    <ul>
+      <% @livro.errors.full_messages.each do |message|%>
+        <li><%= message %> </li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_for @livro do |f| %>
+  <p>
+    <%= f.label :nome %> <br />
+    <%= f.text_field :nome %>
+  </p>
+  <p>
+    <%= f.label :exemplares %> <br />
+    <%= f.text_field :exemplares %>
+  </p>  
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
