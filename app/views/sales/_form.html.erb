@@ -1,0 +1,22 @@
+<% if @sale.errors.any? %>
+  <div id="error_explanation">
+    <h2>Infelizmente não foi possível completar a ação pois o formulário possui os seguintes erros:</h2>
+    <ul>
+      <% @sale.errors.full_messages.each do |message|%>
+        <li><%= message %> </li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_for @sale do |f| %>
+  
+  <p>
+    <%= f.label :livro_id %> <br />
+    <%= f.text_field :livro_id %>
+  </p> 
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

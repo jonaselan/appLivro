@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Controle de Vendas</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Livro</th>
+      <th>Preço</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sales.each do |sale| %>
+      <tr>
+        <td><%= sale.livro.nome %></td>
+        <td><%= sale.livro.price %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to 'Nova Venda', new_sale_path %>

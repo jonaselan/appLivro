@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :livros
+  resources :sales
   
   root to: 'home#index'
 

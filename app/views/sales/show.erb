@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %> </p>
+  <h2>Titulo: <%= @livro.nome %> </h2>
+
+  <ul>
+    <li>Quantidade: <%= @livro.exemplares %> </li>
+    <li>Preço: <%= @livro.price %> </li>
+  </ul>
+
+  <%= link_to 'Voltar', livros_path %>

@@ -1,5 +1,5 @@
 class Livro < ActiveRecord::Base
-  # belongs_to Venda
+  has_one :sale
 
   validates_presence_of :nome, :exemplares
 end
